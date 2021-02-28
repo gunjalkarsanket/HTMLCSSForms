@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style6.css">
+    <title>Enter Job Data</title>
+    <script>
+        function validate()
+        {
+            //alert("ok");
+            var od=document.getElementById("opdate").value;
+            var today = new Date();
+            if(new Date(od)>today){
+                alert("Invalid date");
+                return false;
+            }
+            return true;
+           
+        }
+    </script>
+</head>
+<body>
+
+<br>
+<br>
+<br>
+    <center>
+        <p id="demo"> </p>
+    <form action="#">
+        <label for="title" class="lab">Title :</label>
+        <input type="text" id="title" name="title" placeholder="Enter title here" required><br><br>
+        
+        <label for="type" class="lab">Type :</label>
+        <select id="type" name="type" required>
+            <option>Program Analyst Trainee</option>
+            <option>Engineer Trainee</option>
+            <option>Programmer Trainee</option>
+            <option>Senior Developer</option>
+        </select><br><br>
+
+        <label for="dept" class="lab">Department :</label>
+        <select id="dept" name="dept" required>
+            <option>Banking</option>
+            <option>Life Science</option>
+            <option>Cyber Security</option>
+        </select><br><br>
+
+        <label for="contry" class="lab">Country :</label>
+        <select id="cntr" name="cntr" required>
+            <option>India</option>
+            <option>USA</option>
+            <option>UK</option>
+            <option>Brazil</option>
+            <option>Canada</option>
+        </select><br><br>
+
+        <label for="opdate" class="lab">Opening Date :</label>
+        <input type="date" id="opdate" name="opdate" onchange="return validate()" required><br><br>
+
+        <label for="descrp" class="lab">Description :</label>
+        <textarea id="descrp" name="descrp"  required></textarea><br><br>
+
+        <input type="submit" id="submit" value="SUBMIT">
+    </center>
+    </form>
+    
+</body>
+</html>

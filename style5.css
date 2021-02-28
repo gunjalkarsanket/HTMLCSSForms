@@ -1,0 +1,27 @@
+﻿body{
+    background-color: lightblue;
+}
+#san1
+{ margin-left:200px;
+float:left;
+}
+
+#san2
+{
+float:center;}
+#submit
+{
+font-size:15px;}
+
+#employed{
+    display: none;
+}
+.lab{
+    background-color:lightblue ;
+    font-size: 15px;
+    font-weight: light;
+}
+
+h3{
+    background-color: lightblue;
+}

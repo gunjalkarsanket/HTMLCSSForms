@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+   </head><body><h3> <title>Apply for Job</title></h3><h3>
+    <link rel="stylesheet" href="style5.css">
+    <script>
+        function show(){
+         var x=document.getElementById("employed");
+                var dispx=x.style.display;
+                if(dispx=='block')
+                {
+                    x.style.display='none';
+                }
+                else
+                {
+                    x.style.display='block';
+                }
+        }
+
+        function valid(){
+            var mob=document.getElementById("mob").value;
+            if(mob.length!=10)
+            {
+                alert("Invalid mobile number");
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+
+    <center>
+        <h3>Apply Job</h3>
+        <div id="san1">
+        <form onsubmit="return valid();">
+                            <label for="fname" class="lab">First name:</label>
+                            <input type="text" id="fname" name="fname" placeholder="FIRST NAME" pattern="[A-Za-z ]{1,20}" required=""><br><br><br>
+                            
+                            <label for="lname" class="lab">Last name:</label>
+                            <input type="text" id="lname" name="lname" placeholder="LAST NAME" pattern="[A-Za-z ]{1,20}" required=""><br><br><br>
+                            
+                            <label for="email" class="lab">Employee Email :</label>
+                            <input type="email" id="email" name="email" placeholder="xyz@gmail.com" required=""><br><br><br>
+                            
+                            <label for="mob" class="lab">Mobile no. : +91 </label>
+                            <input type="tel" id="mob" name="mob" placeholder="mobile number" pattern="[7-9]{1}[0-9]{9}" required=""><br><br><br>
+
+                            <label for="city" class="lab">City :</label>
+                            <input type="text" id="city" name="city" placeholder="Enter city" required=""><br><br><br>
+
+                            <label for="state" class="lab">State :</label>
+                            <input type="text" id="state" name="state" placeholder="Enter state" required=""><br><br><br>
+
+                            <label for="zip" class="lab">Zip :</label>
+                            <input type="number" id="zip" name="zip" placeholder="Enter zip" required=""><br><br><br>
+
+                            <label for="contry" class="lab">Country :</label>
+                            <select id="cntr" name="cntr" required="">
+                                <option selected="selected">India</option>
+                                <option>USA</option>
+                                <option>UK</option>
+                                <option>Brazil</option>
+                                <option>Canada</option>
+                                <option>Japan</option>
+                                <option>Other</option>
+                            </select><br><br><br>
+                            </form></div>
+                            <div id="san2">
+
+                            <label for="edul" class="lab">Education Level :</label>
+                            <select id="edul">
+                                <option selected="selected">Under Graduate</option>
+                                <option>Graduate</option>
+                                <option>Post Graduate</option>
+                            </select><br><br><br>
+
+                            <label for="res" class="lab">Upload your resume</label>
+                            <input type="file" id="res" name="res" accept=" .pdf" required=""><br><br><br>
+
+                            <label for="covl" class="lab">Cover Letter:</label>
+                            <textarea id="covl"> </textarea><br><br><br>
+
+                            <input type="checkbox" id="empd" name="empd" onclick="show()">
+                            <label for="empld" class="lab"> Employed ? tick here</label><br><br>
+
+                            <div id="employed">
+                                <label for="curemp" class="lab">Current Employer :</label>
+                                <input type="text" id="curemp" name="curemp"><br><br>
+                                <label for="exp" class="lab">Years of Experience :</label>
+                                <input type="number" id="exp" name="exp"><br><br>
+                                <label for="apply" class="lab">Select jobs you want to apply :</label>
+                                <select id="apply">
+                                    <option value="pg" selected="selected">Programmer</option>
+                                    <option value="sup">Support</option>
+                                    <option value="hr">HR</option>
+                                    <option value="train">Trainer</option>
+                                </select><br><br>
+
+                                <br><br>
+                            </div>
+                            <br><br>
+                            <input type="submit" id="submit" value="SUBMIT">
+                            </div>
+                            
+                            
+
+                            
+        
+    </center>
+
+
+</h3></body></html>
+<!--2.2. Apply for Jobs form (apply_job.html):
+
+page title: Apply for Jobs
+
+fields:
+
+
+- applicants: appl_id, first_name, last_name, email, phone_num, address, city, state, zip, country_cd (fk1),
+              appl_status_cd (fk2), edu_level_cd (fk3), edu_type_cd (fk4), resume_file_name, 
+              cover_letter_text, date_applied, employed_flag, current_employer_name, years_of_exp..
+ 
+   first name: text field*
+   last name: text field*
+   email: text field*
+   phone: text field*
+   address: text field* 
+   city: text field*
+   state: text field*
+   zip: text field*  - integer
+
+from Sivaram Prasad to everyone:    4:15 PM
+   country: drop down (select)*
+   education level: drop down (select)*
+   education type:  drop down (select)*   
+   resume:  file upload type * 
+   cover letter: text area (optional)
+   are you employed?: checkbox
+   if employed (show only when the above checkbox is checked),
+      current employer: text field
+      years of experience: numeric 
+   jobs you want to apply: multi-select (open jobs list)
+     
+   [submit] button
+
+* = required fields
+   javascript validations: 
+     validate that required fields are not blank when submit is clicked
+     validate that numberic values are valid
+     if possible add validations for phone number and email
+
+Note: Use CSS stylesheet file to define classes for various texts (headers, field names, hints..) and input fields
+
+*********************************
+
+from sovon singha to everyone:    4:26 PM
+yes
+from Diptom Saha to everyone:    4:27 PM
+Manoj told that we will get takstac login by monday.
+from Diptom Saha to everyone:    4:27 PM
+*next week.
+from Subham Bairagya to everyone:    4:33 PM-->
